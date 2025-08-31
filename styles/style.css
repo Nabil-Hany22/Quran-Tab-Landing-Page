@@ -1,11 +1,14 @@
 :root {
-  --color-very-dark-blue: #0f1424;
-  --color-dark-blue: #1c1f4a;
-  --color-desaturated-blue: #5646e9;
-  --color-pale-blue: #bdc1ff;
-  --color-white: #fff;
+  --color-soft-blue: #5368df;
+  --color-soft-red: #fa5757;
+  --color-grayish-blue: #9194a1;
+  --color-very-dark-blue: #252b46;
+  --color-off-white: #f7f7f7;
   --default-padding: 2rem;
-  --default-radius: 0.8rem;
+  --default-radius: 0.4rem;
+  --desktop-width: 900px;
+  --tablet-width: 600px;
+  --timing-animation: 0.2s;
 }
 
 /* Start Css Reset */
@@ -24,6 +27,7 @@
 a {
   color: inherit;
   display: inline-block;
+  text-decoration: none;
 }
 
 button {
@@ -45,7 +49,45 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Rubik", sans-serif;
-  color: var(--color-white);
 }
 
-/* container *//*# sourceMappingURL=style.css.map */
+/* container */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--default-padding);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--default-padding);
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.logo-content__logo {
+  width: 4rem;
+  max-width: 100%;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--default-padding);
+}
+.links__link {
+  color: var(--color-very-dark-blue);
+  transition: color var(--timing-animation) ease-in-out;
+}
+.links__link:hover {
+  color: var(--color-soft-red);
+}/*# sourceMappingURL=style.css.map */

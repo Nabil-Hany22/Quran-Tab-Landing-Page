@@ -1,55 +1,101 @@
-
 // css variabels start
 :root {
-    --color-very-dark-blue: #0f1424;
-    --color-dark-blue: #1c1f4a;
-    --color-desaturated-blue: #5646e9;
-    --color-pale-blue: #bdc1ff;
-    --color-white: #fff;
-    --default-padding: 2rem;
-    --default-radius: 0.8rem;
+  --color-soft-blue: #5368df;
+  --color-soft-red: #fa5757;
+  --color-grayish-blue: #9194a1;
+  --color-very-dark-blue: #252b46;
+  --color-off-white: #f7f7f7;
+  --default-padding: 2rem;
+  --default-radius: 0.4rem;
+  --desktop-width: 900px;
+  --tablet-width: 600px;
+  --timing-animation: 0.2s;
+}
+// css variabels end
+
+/* Start Css Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+/* End Css Reset */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+}
+
+/* container */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--default-padding);
+}
+
+//Header Start
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--default-padding);
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &__logo {
+    width: 4rem;
+    max-width: 100%;
   }
-  // css variabels end
-  
-  /* Start Css Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--default-padding);
+
+  &__link {
+    color: var(--color-very-dark-blue);
+    transition: color var(--timing-animation) ease-in-out;
+
+    &:hover {
+      color: var(--color-soft-red);
+    }
   }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  a {
-    color: inherit;
-    display: inline-block;
-  }
-  
-  button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  ul,
-  ol {
-    list-style: none;
-  }
-  /* End Css Reset */
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  body {
-    font-size: 1.6rem;
-    font-family: "Rubik", sans-serif;
-    color: var(--color-white);
-  }
-  
-  /* container */
-  
+}
+
+//Header Start
