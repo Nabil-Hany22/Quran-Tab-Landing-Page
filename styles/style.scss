@@ -258,10 +258,21 @@ body {
     max-width: 100%;
     right: 0;
     top: calc(var(--default-padding) + 0.6rem);
+    transition: transform var(--timing-animation) ease-in-out;
   }
 
   &__input {
     display: none;
+
+    &:checked ~ .faq__answer {
+      opacity: 1;
+      max-height: 30rem;
+      padding-top: var(--default-padding);
+    }
+
+    &:checked ~ .faq__arrow {
+      transform: rotate(180deg);
+    }
   }
 
   &__question {
@@ -274,6 +285,10 @@ body {
   &__answer {
     font-size: 1.4rem;
     font-weight: 400;
+    opacity: 0;
+    transition: all var(--timing-animation) ease-in-out;
+    max-height: 0.1rem;
+    overflow: hidden;
   }
 }
 
