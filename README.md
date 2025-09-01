@@ -11,13 +11,16 @@ Check out the live version of the project here:
 
 ---
 
-## 📸 Preview
+## 📸Desktop & Tablet Preview
 
 <p align="center">
-  <img src="./preview/desktop_version.png" alt="Desktop Version" width="48%">
-  <img src="./preview/tablet_version.png" alt="Tablet Version" width="48%">
+  <img src="./preview/desktop_version.png" alt="Desktop Version" width="45% "align="top">
+  <img src="./preview/tablet_version.png" alt="Tablet Version" width="45%"  align="top">
 </p>
 
+---
+
+## 🎥 Mobile Preview 
 <p align="center">
   <img src="./preview/mobile_version.png" alt="Mobile Version" width="50%">
 </p>
