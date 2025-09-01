@@ -63,17 +63,28 @@ body {
   color: var(--color-off-white);
   font-weight: 500;
   font-size: 1.2rem;
-  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(40, 30, 30, 0.1);
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #0056b3;
+  }
 
   &-secondary {
     background-color: var(--color-off-white);
     color: var(--color-very-dark-blue);
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
   }
 
   &--disabled {
     background-color: var(--color-grayish-blue);
     cursor: not-allowed;
     user-select: none;
+    &:hover {
+      background-color: var(--color-grayish-blue);
+    }
   }
 }
 // glopal classes end
@@ -87,6 +98,58 @@ body {
   padding: 0 var(--default-padding);
   gap: calc(var(--default-padding) * 4);
 }
+
+// fixed scroll button Start
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-soft-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid white;
+  animation: bounce 0.6s infinite alternate;
+}
+
+#top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+// fixed scroll button End
 
 //Header Start
 .header {
@@ -113,13 +176,14 @@ body {
   display: flex;
   align-items: center;
   gap: var(--default-padding);
+  font-weight: 500;
 
   &__link {
     color: var(--color-very-dark-blue);
     transition: color var(--timing-animation) ease-in-out;
 
     &:hover {
-      color: var(--color-soft-red);
+      color: #0056b3;
     }
   }
 }
