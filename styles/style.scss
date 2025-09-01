@@ -79,15 +79,9 @@ body {
     }
   }
 
-  &--disabled {
-    background-color: var(--color-grayish-blue);
-    cursor: not-allowed;
-    user-select: none;
-    &:hover {
-      background-color: var(--color-grayish-blue);
-    }
+
   }
-}
+
 // glopal classes end
 
 /* container */
