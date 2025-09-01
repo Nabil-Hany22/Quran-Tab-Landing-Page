@@ -293,3 +293,29 @@ body {
 }
 
 //FAQ Section End
+
+//Footer Section Start
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: var(--default-padding);
+  font-size: 1.4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--color-very-dark-blue);
+    z-index: -1;
+  }
+
+  &__left {
+    margin-right: auto;
+  }
+}
+
+//Footer Section End
